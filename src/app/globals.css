@@ -49,9 +49,9 @@
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.21 0.006 285.885);
+  --primary: #E90975;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.967 0.001 286.375);
+  --secondary: #5C0830;
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
@@ -119,3 +119,24 @@
   }
 }
 
+
+
+
+/* Global CSS (styles.css or similar) */
+.btn {
+  @apply bg-gradient-to-b from-[#E90975] to-[#5C0830] text-white font-semibold rounded-lg shadow-md transition-colors duration-300;
+}
+
+
+.btn-outline {
+  @apply border-4 border-[#E90975] text-[#E90975] font-semibold rounded-lg shadow-md bg-transparent transition-colors duration-300;
+  
+  /* Gradient from top to bottom */
+}
+
+.btn-outline:hover {
+  background: linear-gradient(to top, #5C0830, #E90975);
+  /* Reverse gradient on hover */
+  color: white;
+  /* Change text color to white on hover */
+}
